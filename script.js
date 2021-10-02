@@ -317,3 +317,26 @@ let counter2 = counterFn();
 counter2();
 counter2();
 counter2();
+
+
+
+function calcP(a,b,c){
+    return a+b+c;
+}
+calcP();
+function toUpper(symbol){
+    console.log(symbol.toUpperCase());
+}
+function useToUpper(fn, str){
+    for (let symbol of str){
+        fn(symbol);
+    }
+
+    // for(let i = 0; i < str.lenght; i++){
+    //     if(str[1] !== ''){
+    //         fn(str[i]);
+    //     } 
+    // }
+}
+
+useToUpper(toUpper, 'Some text to upper');

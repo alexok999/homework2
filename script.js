@@ -22,15 +22,15 @@ let value22 = "135.58px";
 console.log(parseFloat(value22));
 
 //Задача 3 Построить верное условное ветвление
-// let value2 = 58 + "Фрилансер";
+// let value2 = 58 - "Фрилансер";
 // if (написать ответ) {
 //     console.log('Результат выражения NaN');
 // }
 
-// let value2 = 58 + "Фрилансер";
-// if (value2 == NaN) {
-//     console.log(isNaN(value2));
-// }
+let value2 = 58 - "Фрилансер";
+if (isNaN(value2)) {
+    console.log('Результат выражения NaN');
+}
 
 
 //Задача 4 Найти максимальное число из 10,58,39,-150,0

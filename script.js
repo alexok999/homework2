@@ -190,14 +190,130 @@ sayhi();
 ///// function expression  // не всплывает!
 
 
-let newFunc = function(){
-    console.log('im func expression');
+// let newFunc = function(){
+//     console.log('im func expression');
+// }
+// newFunc();
+
+
+
+// let calcSum = function(a, b) {
+//     return a + b;
+// }
+// console.log(calcSum(1,2));
+
+
+// // Стрелочные функции - arrow functions
+// // (parameters) => {telo}
+
+// let parametr = (a,b) => a + b;
+// console.log(parametr(3,2));
+
+// // {() => {
+// //     console.log('test');
+// // }};
+
+
+
+
+
+// function testArguments(...args){
+//     console.log(arguments);
+//     console.log(args);
+
+// }
+
+// testArguments(1,2,3,4,5,6,7,8,9,0);
+
+
+// function testHiOrder (sayHiFn, count){
+//     for (let i = 0; i < count; i++){
+//         sayHiFn();
+//     }
+
+// }
+
+
+// function sayHi(){
+//     console.log('Hiii');
+// }
+
+
+// testHiOrder(sayHi, 5);
+
+
+
+
+// // testHiOrder (sayHiFn () => console.log('hii'), 5);
+
+
+
+// function sayHello(){
+//     console.log('Hi, Alex');
+// }
+
+// function getFnSayHiTo(name){
+//     return () => console.log('Hi ' + name);
+// }
+
+// let sayHiSashaFn = getFnSayHiTo('Alex');
+
+// let sayHiRomaFn = getFnSayHiTo('Roma');
+// sayHiSashaFn();
+// sayHiRomaFn();
+
+
+
+
+
+
+
+// Замыкание - лексическое окружение (lexical environment)
+
+// let c = 3;
+// let d = 4;
+
+
+// function test3() {
+//     let a = 1;
+//     let b = 2;
+//     console.log(c);
+// }
+// test3();
+
+
+
+// function test5(){
+//     let c = 10;
+//     test3();
+
+// }
+
+// test5();
+
+
+let a = 1;
+function test() {
+    let a = 2;
+    console.log(a);
 }
-newFunc();
+test();
 
 
-
-let calcSum = function(a, b) {
-    return a + b;
+function counterFn(){
+    let count = 0;
+    return function (){
+        count++;
+        console.log(count);
+    }
 }
-console.log(calcSum(1,2));
+
+let counter = counterFn();
+counter();
+counter();
+counter();
+
+let counter2 = counterFn();
+counter2();
+counter2();
+counter2();
